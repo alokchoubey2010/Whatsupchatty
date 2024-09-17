@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+
+@font-face {
+  src: url('/authentication/Poppins-Regular.ttf');
+  font-family: poppins;
+}
+
+body{
+  min-height: 97vh;
+  background: #1c1f2b;
+  color: white;
+}
+
+.logo{
+  background: linear-gradient(45deg,#465EFC,aqua);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 22px;
+  position: absolute;
+  top: 17px;
+  left: 7px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-shadow: 0 0 20px #465EFC;
+}
+
+.topNav{
+  position: absolute;
+  top: 65px;
+  left: 0px;
+  background: #2a2e3b;
+  width: 98%;
+  margin-left: 1%;
+  height: 150px;
+  padding: 8px;
+  border-radius: 14px;
+}
+
+.profileHolder{
+  width: 100%;
+  height: 85px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-top: 5px;
+}
+
+.add{
+  width: 56px;
+  height: 56px;
+  border: 2px solid #465EFC;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+p.text{
+  position: absolute;
+  bottom: -25px;
+  font-size: 13px;
+  left: 10px;
+}
+
+.profile{
+  /* overflow: scroll; */
+  width: 56px;
+  height: 56px;
+  /* border: 2px solid #465EFC; */
+  border-radius: 50%;
+  position: relative;
+}
+
+.profile .profileImgNav{
+  width: 100%;
+  height: 100%;
+}
+
+.profile .nameLabel{
+  position: absolute;
+  bottom: -24px;
+  z-index: 111;
+  font-size: 13.3px;
+  left: 10px;
+}
+
+.nav ul{
+  display: flex;
+  gap: 16px;
+  padding: 9px;
+  background: linear-gradient(45deg,#465EFC,aqua);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav ul li{
+  list-style: none;
+}
+
+.nav ul li a.active{
+  text-transform: underline;
+}
+
+.nav ul li a{
+  color: aqua;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.chatContainer{
+  position: absolute;
+  top: 225px;
+  background: #2a2e3b;
+  padding: 10px;
+  border-radius: 14px;
+  width: 98%;
+  margin-left: 1%;
+  height: 65vh;
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+
+.chatContainer .contact{
+  width: 100%;
+  height: 63px;
+  display: flex;
+  position: relative;
+}
+
+.contact:not(:first-child){
+  margin: 12px 0px;
+}
+
+.chatContainer .contact .profileImg{
+  height: 52px;
+  width: 52px;
+  /* border: 2px solid #465EFC; */
+  border-radius: 50%;
+  margin-top: 1.99px;
+  margin-left: 2px;
+}
+
+.chatContainer .contact .name{
+  font-size: 18px;
+  padding: 4.5px;
+  position: absolute;
+  left: 75px;
+  font-weight: bold;
+  background: linear-gradient(45deg,#465EFC,aqua);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.chatContainer .contact .about{
+  position: absolute;
+  left: 80px;
+  top: 27px;
+  font-size: 14px;
+}
+
+.chatContainer .contact .status{
+  position: absolute;
+  right: 8px;
+  top: 6px;
+  font-size: 14px;
+  color: greenyellow;
+  text-shadow: 0 0 10px greenyellow;
+}

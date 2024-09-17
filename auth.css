@@ -1,0 +1,215 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+
+@font-face{
+  src: url('Poppins-Regular.ttf');
+  font-family: poppins;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 97vh;
+  background: #1c1f2b;
+  color: white;
+}
+
+
+  .input {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+  }
+
+  .input input {
+    padding: 10px 20px;
+    border: 2px solid #465EFC;
+    background: transparent;
+    border-radius: 8px;
+    outline: none;
+    transition: all .7s;
+    color: #fff;
+    width: 335px;
+  }
+
+  .input span.label {
+    position: absolute;
+    top: 10px;
+    left: 18px;
+    font-size: 14px;
+    opacity: .956;
+    transition: .4s;
+    letter-spacing: 0px;
+    color: #fff;
+  }
+
+  .input input:focus~span.label,
+  .input input:valid~span.label {
+    transform: translateX(6px) translateY(-19px);
+    font-size: .85em;
+    text-transform: uppercase;
+    border-left: 2px solid #465EFC;
+    border-right: 2px solid #465EFC;
+    text-shadow: 0 0 10px #465EFC;
+    background: #1c1f2b;
+    padding: 0 10px;
+    color: white;
+}
+  
+  
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+#google{
+  padding: 8.4px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  gap: 15px;
+  border-radius: 10px;
+  border: 2px solid #465ECF;
+  background: none;
+  width: 335px;
+  color: #fff;
+}
+
+#email{
+  padding: 6px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  gap: 15px;
+  border-radius: 10px;
+  border: 2px solid #465EFC;
+  background: #465EFC;
+  width: 335px;
+  color: #fff;
+}
+
+h2{
+  font-size: 17px;
+  font-weight: 500;
+  position: relative;
+}
+
+h2::before{
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(45deg,#465EFC,#1c1f2b);
+}
+
+h2::after{
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: 205px;
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(-45deg,#465EFC,#1c1f2b);
+}
+
+.continue{
+    padding: 7.8px 20px;
+    border: 2px solid transparent;
+    background: #465EFC;
+    border-radius: 8px;
+    outline: none;
+    transition: all .7s;
+    color: #fff;
+    width: 335px;
+    font-size: .90em;
+    position: relative;
+}
+
+.email_form{
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.continue::after{
+  content: 'Welcome User';
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  color: #465EFC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: inherit;
+  border-radius: inherit;
+  animation: slide .55s linear;
+  overflow: hidden;
+  white-space: nowrap;
+  display: none;
+}
+
+@keyframes slide{
+  from{
+    width: 0%;
+  }
+}
+
+.link{
+  color: aqua;
+  text-decoration: none;
+}
+
+.oneClickLogin{
+  padding: 10px 13.5px;
+  width: 335px;
+  height: 55px;
+  border: 2px solid #465ECF;
+  border-radius: 10px;
+  position: relative;
+  margin-top: 20px;
+  display: none;
+}
+
+.oneClickLogin #imgDisplay{
+  width: 47px;
+  height: 47px;
+  position: absolute;
+  top: 1px;
+  left: 14px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.oneClickLogin p#name{
+  position: absolute;
+  top: 4px;
+  font-size: 16.8px;
+  left: 72px;
+}
+
+.oneClickLogin p#emaildisp{
+  position: absolute;
+  top: 26px;
+  left: 72px;
+  font-size: .82em;
+}
+
+.oneClickLogin img.icon{
+  position: absolute;
+  right: 9px;
+  top: 12px;
+}
