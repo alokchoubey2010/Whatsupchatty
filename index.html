@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login to Chatty</title>
+</head>
+
+  <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database-compat.js"></script>
+
+<link rel="stylesheet" href="auth.css">
+
+<body>
+  <div class="container">
+  <div class='lander' style='display: block'>
+    <button id="google" onclick='showGoogleForm()'>
+      <img src="google.png">
+      Sign up with Google
+    </button>
+    
+    <center>
+      <h2 style='margin-top: 15px; margin-bottom: 15px;'>OR</h2>
+    </center>
+    
+    <button id="email" onclick='openEmailForm()'>
+      <img src="mail-outline.svg" width='28px'>
+      Continue with Email
+    </button>
+    
+    <div class='oneClickLogin'>
+      <img alt="profile" id="imgDisplay">
+      <p id="name"></p>
+      <p id="emaildisp"></p>
+      <img src="arrow-forward-outline.svg" class='icon' width='26px'>
+    </div>
+    
+  </div>
+  
+    <div class="email_form">
+      
+      <center>
+        <p style='font-size: 20px'>Welcome Again...</p>
+        <p class='bodyText'style='margin-bottom: 12px;'>Sign in and start where you left</p>
+      </center>
+      
+      <div class="input">
+        <input type="email" id='emailbx' required>
+        <span class="label">Email Address</span>
+      </div>
+      
+      <div class="input">
+        <input type="password" id='password'required>
+        <span class="label">Password</span>
+      </div>
+      
+      <button class="continue" onclick='login()'>Start Chating</button>
+      <center>
+        <p style='margin-top: 5px;'>No account ? <span class='link' onclick='showSignupForm()'>Create One</spanne></p>
+      </center>
+    </div>
+    
+  </div>
+</body>
+<script src="auth.js">auth.js</script>
+
+</html>
