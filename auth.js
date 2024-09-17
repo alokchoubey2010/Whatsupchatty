@@ -47,7 +47,7 @@ function showSignupForm() {
 function showGoogleForm() {
   const provider = new firebase.auth.GoogleAuthProvider();
 
-  firebase.auth().signInWithRedirect(provider)
+  firebase.auth().signInWithPopup(provider)
     .then((user) => {
       // updateProfile(user);
       updateToDatabase(user);
