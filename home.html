@@ -6,9 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Welcome to Whatsupchatty</title>
 </head>
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database-compat.js"></script>
 <link rel="stylesheet" href="home.css">
 <body>
+  
   <p class="logo">Whatsupchatty</p>
+    <img src="settings-outline.svg" id="searchIcon" onclick='showOptions()'>
+  
+  <div class="settingsOption">
+    <div class="item">
+      <img src="pencil-outline.svg" width="25px;">
+      <p>Edit Profile</p>
+    </div>
+    <div class="item">
+      <img src="enter-outline.svg" width="25px;">
+      <p>Join a Room</p>
+    </div>
+    <div class="item">
+      <img src="add-outline.svg" width="25px;">
+      <p>Create Room</p>
+    </div>
+  </div>
+  
   <div class="topNav">
     
     <div class="profileHolder">
@@ -32,13 +53,18 @@
   
   
   <div class="chatContainer">
+    <div class="input" style='width: 100%;'>
+      <input type="text" style='width: 100%;border-radius: 24px;' oninput="autocompleteSearch()" id='searchInput' required>
+      <span class='label'>Search Contacts</span>
+      <img src="search-outline.svg" class="searchIcon">
+    </div>
+  <div class="contacts">
+  </div>
+  <div class="chats">
     
+  </div>
   </div>
   
 </body>
-
-<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database-compat.js"></script>
 <script src="home.js">home.js</script>
 </html>

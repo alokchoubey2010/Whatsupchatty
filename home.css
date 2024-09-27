@@ -6,7 +6,7 @@
 }
 
 @font-face {
-  src: url('Poppins-Regular.ttf');
+  src: url('/authentication/Poppins-Regular.ttf');
   font-family: poppins;
 }
 
@@ -23,10 +23,46 @@ body{
   font-size: 22px;
   position: absolute;
   top: 17px;
-  left: 7px;
+  left: 12px;
   font-weight: bold;
   letter-spacing: 1.5px;
   text-shadow: 0 0 20px #465EFC;
+}
+
+#searchIcon{
+  position: absolute;
+  width: 28px;
+  top: 24px;
+  right: 15px;
+}
+
+.settingsOption{
+  position: absolute;
+  z-index: 1111;
+  right: 15px;
+  top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(7px);
+  --webkit-backdrop-filter: blur( 7px);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all .8s;
+  transform: translateX(-80px);
+  opacity: 0;
+}
+
+.settingsOption.active{
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.item{
+  display: flex;
+  gap: 5px;
 }
 
 .topNav{
@@ -81,6 +117,7 @@ p.text{
 .profile .profileImgNav{
   width: 100%;
   height: 100%;
+  border-radius: 50%;
 }
 
 .profile .nameLabel{
@@ -133,9 +170,6 @@ p.text{
   height: 63px;
   display: flex;
   position: relative;
-}
-
-.contact:not(:first-child){
   margin: 12px 0px;
 }
 
@@ -173,4 +207,66 @@ p.text{
   font-size: 14px;
   color: greenyellow;
   text-shadow: 0 0 10px greenyellow;
+}
+
+  .input {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+  }
+
+  .input input {
+    padding: 10px 20px;
+    border: 2px solid #465EFC;
+    background: transparent;
+    border-radius: 8px;
+    outline: none;
+    transition: all .7s;
+    color: #fff;
+    width: 325px;
+  }
+
+  .input span.label {
+    position: absolute;
+    top: 10px;
+    left: 18px;
+    font-size: 14px;
+    opacity: .956;
+    transition: .4s;
+    letter-spacing: 0px;
+    color: #fff;
+  }
+
+  .input input:focus~span.label,
+  .input input:valid~span.label {
+    transform: translateX(6px) translateY(-19px);
+    font-size: .85em;
+    text-transform: uppercase;
+    border-left: 2px solid #465EFC;
+    border-right: 2px solid #465EFC;
+    text-shadow: 0 0 10px #465EFC;
+    background: #2a2e3b;
+    padding: 0 10px;
+    color: white;
+  }
+  
+  .searchIcon{
+    position: absolute;
+    right: 18px;
+    top: 10px;
+    width: 26px;
+  }
+  
+button.send{
+  padding: 12px 14px;
+  background: linear-gradient(45deg,#456EFC,aqua);
+  border: none;
+  border-radius: 29px;
+}
+
+.msgBox{
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  bottom: 20px;
 }
