@@ -117,3 +117,17 @@ function updateProfilePicure(){
 }
 
 updateProfilePicure();
+
+function handleNewMessage(snapshot) {
+    const data = snapshot.val();
+    console.log('New message added:', newMessage);
+    if(data.sender === selectedContact){
+      displaySend(data.message,"recieved",convertTimestampTo24HourFormat(data.time));
+    }else{
+      displaySend(data.message,"sent",convertTimestampTo24HourFormat(data.time));
+    }
+}
+
+currentRoom = localStorage.getItem("currentRoom");
+messagesRef = firebase.database().ref(`rooms/${currentRoom}`);
+messagesRef.on('child_added', handleNewMessage);
