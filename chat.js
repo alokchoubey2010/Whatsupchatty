@@ -104,3 +104,16 @@ function convertTimestampTo24HourFormat(timestamp) {
     hour12: false // Ensure 24-hour format
   });
 }
+
+
+function updateProfilePicure(){
+  selectedContact = localStorage.getItem("selectedContact");
+  ref = firebase.database().ref(`users/${selectedContact}`);
+  ref.on('value',function(snapshot){
+    data = snapshot.val();
+    profileImg = document.querySelector(".profileImg");
+    profileImg.src = data.profileImg;
+  })
+}
+
+updateProfilePicure();
